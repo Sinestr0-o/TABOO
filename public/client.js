@@ -2,7 +2,7 @@
    Assumes the server serves /style.css and the UI will be rendered dynamically here.
 */
 
-const socket = io();
+const socket = io(https://taboo-iojt.onrender.com);
 let myId = null;
 let state = { players: [], game: {} };
 
@@ -269,5 +269,6 @@ function escapeHtml(s){ return String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<
 
 // request initial players list
 socket.emit('requestState');
+
 
 console.log('client loaded');
